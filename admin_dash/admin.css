@@ -8,6 +8,7 @@ body{
     padding: 0;
     background-color: black;
     /* margin-top: 100px; */
+    
 }
 
 .material-icons {
@@ -21,15 +22,17 @@ body{
     display: grid;
     grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
-    min-height: 100vh;
+    min-height: 100vh; 
+    border-radius: 20px;
 }
 
 
 .sidebar {
-    background-color: #ee25e7;
-    color: rgb(22, 21, 21);
+    background-color: hsl(207, 80%, 50%);
+    color: rgb(21, 23, 23);
     grid-row: 1 / -1;
     padding: 20px;
+    border-radius: 5px;
 }
 
 .sidebar-brand {
@@ -59,12 +62,13 @@ body{
 
 .header {
     
-    background-color: rgb(155, 245, 169);
+    background-color: rgb(222, 223, 222);
     padding: 15px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: grid;
     gap: 20px;
     grid-template-rows: auto auto;
+    border-radius: 5px;
    
 }
 
@@ -89,7 +93,7 @@ body{
     padding: 10px;
     border-radius: 20px;
     border: none;
-    background-color: #e2e8f0;
+    background-color: #f7f9fb;
     font-size: 0.9rem;
 }
 
@@ -102,7 +106,7 @@ body{
 .notification-section img{
     width: 50px;
     height: 50px;
-    border: 2px solid #ffcc00;
+    border: 2px solid #5399f4;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -122,7 +126,7 @@ body{
 .header-left .avatar {
     width: 50px;
     height: 50px;
-    border: 2px solid #ffcc00;
+    border: 2px solid #3694e5;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -157,7 +161,7 @@ body{
     padding: 8px 18px;
     border: none;
     border-radius: 20px;
-    background-color: #322bf9;
+    background-color: #4073f6;
     color: rgb(228, 247, 135);
     cursor: pointer;
     font-size: 0.9rem;
@@ -170,16 +174,17 @@ body{
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #ffcc00;
+    border: 2px solid #3795f3;
 }
 
 
 .main-content {
-    background-color: #f7fd7b;
+    background-color: #fefffb;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+    border-radius: 5px;
 }
 
 .projects {
@@ -190,10 +195,10 @@ body{
 }
 
 .project-card {
-    background-color: rgb(128, 252, 252);
+    background-color: rgb(237, 238, 239);
     padding: 20px;
     border-radius: 8px;
-    border-left: 8px solid #10dcea;
+    border-left: 8px solid #2e96eb;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -213,7 +218,7 @@ body{
     margin-left: 60%;
     gap: 1rem;
     font-size: 1.2rem;
-    color: #f884f8;
+    color: #1b1a1b;
    
 }
 
@@ -225,11 +230,11 @@ body{
 }
 
 .announcements, .trending {
-    background-color: rgb(246, 160, 239);
+    background-color: rgb(234, 235, 237);
     /* padding: 5px -10px 5px -10px; */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgb(55, 184, 243);
+    box-shadow: 0 2px 5px rgb(228, 230, 231);
 
 }
 
