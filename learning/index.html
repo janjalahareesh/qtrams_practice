@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        /* Basic styling for the calculator */
+        .container {
+            max-width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            width: 80px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main container for the calculator -->
+    <div class="container">
+        <h3>Simple Calculator</h3>
+
+        
+
+        
+
+        <!-- Buttons for operations -->
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+
+        <br>
+
+        <!-- Div to display the result -->
+        <div id="result">result</div>
+    </div>
+
+    
+    <script>
+        // Function for addition
+
+        var a =10;
+        var b =20;
+        
+        function add() {
+    
+
+            
+            var result = a + b; 
+            // document.getElementById('result').innerHTML = 'result a + b= ' + result;
+            document.getElementById('result').innerHTML = document.getElementById('result').innerHTML+"a+b"
+            console.log("hhkshsa", document.getElementById('result').innerHTML)
+
+            
+        }
+
+        function subtract() {
+              
+
+            var result = a - b;
+            document.getElementById('result').innerHTML = 'result a - b=' + result;
+        }
+
+        function multiply() {
+
+
+            var result = a * b;
+            document.getElementById('result').innerHTML = 'result a * b='+ result;
+
+
+
+        }
+
+        function divide() {
+
+
+            var result = a / b;
+            document.getElementById('result').innerHTML = 'result a / b=' + result;
+        }
+    
+    
+
+        
+        
+    </script>
+
+</body>
+</html>

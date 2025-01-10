@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fc;
+    background-color: #f6f3f6;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -24,40 +24,40 @@ body {
     max-width: 600px;
     margin-bottom: 20px;
     padding: 15px 20px;
-    border: 2px solid #181718;
+    border: 2px solid #007bff;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: #141313;
+    background-color: #5bd9f0;
 }
 
 /* Library Title */
 .library-title {
     font-size: 36px;
-    color: #4beaf8e8;
+    color: #0f0f0f;
     margin: 0; 
 }
 
 /* Button to open form */
 .open-form-btn {
-    background-color: #1fe4fa;
-    color: #ffffff;
+    background-color: #dd00ff;
+    color: #202020;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    border: 2px solid #121212; 
+    border: 2px solid #0056b3; 
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .open-form-btn:hover {
-    background-color: #e03bfd;
+    background-color: #ab1bb0;
     border-color: #003a70;
 }
 
 /* Form Container Styling */
 .form-container {
-    display: block;
-    background-color: #ffffff;
+    display: none;
+    background-color: #20e2f0c2;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
@@ -73,20 +73,20 @@ form button {
     font-size: 16px;
     padding: 14px;
     border-radius: 8px;
-    border: 1px solid #d1d9e6;
+    border: 1px solid #66e3ec;
     margin-bottom: 10px;
     width: 100%;
 }
 
 form input[type="text"]:focus,
 form input[type="number"]:focus {
-    border-color: #0bf1f5;
+    border-color: #007bff;
     outline: none;
     box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
 }
 
 form button {
-    background-color: #e970f4;
+    background-color: #f200ff;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
