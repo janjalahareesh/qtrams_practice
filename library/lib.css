@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-/* Header container with border and shadow for title and button */
+
 .header-container {
     display: flex;
     align-items: center;
@@ -30,14 +30,14 @@ body {
     background-color: #5bd9f0;
 }
 
-/* Library Title */
+
 .library-title {
     font-size: 36px;
     color: #0f0f0f;
     margin: 0; 
 }
 
-/* Button to open form */
+
 .open-form-btn {
     background-color: #dd00ff;
     color: #202020;
@@ -54,7 +54,7 @@ body {
     border-color: #003a70;
 }
 
-/* Form Container Styling */
+
 .form-container {
     display: none;
     background-color: #20e2f0c2;
@@ -66,7 +66,7 @@ body {
     max-width: 500px;
 }
 
-/* Form Inputs */
+
 form input[type="text"],
 form input[type="number"],
 form button {
@@ -97,7 +97,7 @@ form button:hover {
     background-color: #000000;
 }
 
-/* Library Container Styling for Horizontal Scroll */
+
 #library-container {
     display: flex;
     flex-wrap: nowrap;
@@ -108,7 +108,7 @@ form button:hover {
     max-width: 100%;
 }
 
-/* Book Card Styling with Distinct Colors */
+
 .book-card {
     background-color: #ffffff;
     border-radius: 12px;
@@ -141,11 +141,9 @@ form button:hover {
 
 .book-card p {
     font-size: 16px;
-    color: #666666;
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
+    color: #666666; 
+}  
+    @media (max-width: 600px) {
     .header-container {
         flex-direction: column;
         align-items: flex-start;

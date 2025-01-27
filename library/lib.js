@@ -1,4 +1,3 @@
-
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -7,6 +6,9 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
+
+
+
 
 
 Book.prototype.toggleRead = function() {
@@ -18,6 +20,7 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
   displayBooks();
 }
+
 
 
 function displayBooks() {
