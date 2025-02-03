@@ -32,7 +32,7 @@
   }
   
   .left-section {
-    width: 120%;
+    width: 35%;
     position: relative;
     overflow: hidden;
     float: left;
@@ -94,7 +94,7 @@
   .right-section {
     justify-content: center;
     align-items: center;  
-    width: 200%;
+    width: 65%;
     height: 200%;
 
     background-color: #89ecef;
