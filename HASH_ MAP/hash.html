@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashMap</title>
+    <link rel="stylesheet" href="hash.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HashMap Implementation</h1>
+        <input type="text" id="key-input" placeholder="Enter key">
+        <input type="text" id="value-input" placeholder="Enter value">
+        <button onclick="setKeyValue()">Set</button>
+        <button onclick="getKeyValue()">Get</button>
+        <!-- <button onclick="hasKey()">has</button> -->
+        <button onclick="removeKey()">Remove</button>
+        <!-- <button id="length-btn">length</button> -->
+        <button onclick="clearHashMap()">Clear</button>
+        <button onclick="showKeys()">Key</button>
+        <button onclick="showValues()">Values</button>
+        <button onclick="showEnties()">entries</button>
+        <h2>HashMap Data:</h2>
+        <pre id="output"></pre>
+    </div>
+
+    <script src="hash.js"></script>
+</body>
+</html>

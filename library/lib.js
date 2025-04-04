@@ -1,101 +1,90 @@
+
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+    constructor(title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
+    }
+
+    
+    toggleReadStatus() {
+        this.isRead = !this.isRead;
+    }
 }
 
 
-
-
-
-Book.prototype.toggleRead = function() {
-  this.read = !this.read;
-};
-
-
-function addBookToLibrary(book) {
-  myLibrary.push(book);
-  displayBooks();
+function addBookToLibrary(title, author, pages, isRead) {
+    const book = new Book(title, author, pages, isRead);
+    myLibrary.push(book);
+    displayBooks(); 
 }
 
-
-
-function displayBooks() {
-  const libraryDiv = document.getElementById('library');
-  libraryDiv.innerHTML = '';
-
-  for(var i = 0; i < myLibrary.length; i++) {
-    var bookCard = createBookCard(myLibrary[i], i);
-    libraryDiv.appendChild(bookCard);
-  }
-}
 function removeBook(index) {
-  myLibrary.splice(index, 1);
-  displayBooks();
+    myLibrary.splice(index, 1);
+    displayBooks(); 
 }
 
 
-function toggleReadStatus(index) {
-  myLibrary[index].toggleRead();
-  displayBooks();
+fu
+    const libraryContainer = document.getElementById('library-container');
+    libraryContainer.innerHTML = '';
+
+    myLibrary.forEach((book, index) => {
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('book-card');
+        bookCard.setAttribute('data-index', index);
+
+        bookCard.innerHTML = `
+            <h3>${book.title}</h3>nction displayBooks() {
+            <p>Author: ${book.author}</p>
+            <p>Pages: ${book.pages}</p>
+            <p>Status: ${book.isRead ? 'Read' : 'Not Read'}</p>
+            <button onclick="removeBook(${index})">Remove</button>
+            <button onclick="toggleRead(${index})">Toggle Read Status</button>
+        `;
+
+        libraryContainer.appendChild(bookCard);
+    });
+
+
+
+function toggleRead(index) {
+    myLibrary[index].toggleReadStatus();
+    displayBooks(); 
 }
 
 
-const modal = document.getElementById('modal');
-const newBookBtn = document.getElementById('newBookBtn');
-const bookForm = document.getElementById('bookForm');
-const closeModalBtn = document.getElementById('closeModal');
+function handleNewBookSubmit(event) {
+    event.preventDefault();
 
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = document.getElementById('pages').value;
+    const isRead = document.getElementById('isRead').checked;
 
-newBookBtn.onclick = function() {
-  modal.style.display = 'flex';
-};
+    addBookToLibrary(title, author, pages, isRead);
 
-
-closeModalBtn.onclick = function() {
-  modal.style.display = 'none';
-};
-
-
-bookForm.onsubmit = function(event) {
-  event.preventDefault();
-
-  var title = document.getElementById('title').value;
-  var author = document.getElementById('author').value;
-  var pages = document.getElementById('pages').value;
-  var read = document.getElementById('read').checked;
-
-  var newBook = new Book(title, author, pages, read);
-  addBookToLibrary(newBook);
-
-  bookForm.reset();
-  modal.style.display = 'none';
-};
-
-
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-};
-
-function createBookCard(book, index) {
-  var card = document.createElement('div');
-  card.className = 'book-card';
-  
-  card.innerHTML = 
-    '<h3>' + book.title + '</h3>' +
-    '<p><strong>Author:</strong> ' + book.author + '</p>' +
-    '<p><strong>Pages:</strong> ' + book.pages + '</p>' +
-    '<div class="book-actions">' +
-      '<button onclick="toggleReadStatus(' + index + ')" class="read-toggle">' +
-        (book.read ? 'Read' : 'Not Read') +
-      '</button>' +
-      '<button onclick="removeBook(' + index + ')" class="delete-btn">Delete</button>' +
-    '</div>';
-
-  return card;
+    
+    event.target.reset();
+    document.getElementById('form-container').style.display = 'none';
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayBooks();
+
+    
+    const openFormBtn = document.getElementById('open-form-btn');
+    const formContainer = document.getElementById('form-container');
+    openFormBtn.addEventListener('click', () => {
+        formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+    });
+
+    const newBookForm = document.getElementById('new-book-form');
+    if (newBookForm) {
+        newBookForm.addEventListener('submit', handleNewBookSubmit);
+    }
+});

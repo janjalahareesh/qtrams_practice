@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #44c5f8, #6598dc);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #ffffffd6;
+    color: #333;
+    font-size: 0.9rem;
+    width: 60%;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+    background: #e07f24;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ee7f1e;
+}
+
+
+.weather-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+    gap: 0.8em;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+}
+
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 160px;
+    max-width: 180px;
+}
+
+.weather-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.weather-card h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.weather-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.weather-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.weather-card .description {
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.weather-card .humidity, 
+.weather-card .wind {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.weather-card button.remove-btn {
+    margin-top: 5px;
+    background: red;
+    border: none;
+    padding: 4px 8px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.weather-card button.remove-btn:hover {
+    background: darkred;
+}

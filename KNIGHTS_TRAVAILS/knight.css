@@ -1,0 +1,57 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    height: 100vh;
+    margin: 0;
+
+    
+      
+} */
+
+@keyframes animateBackground {
+    0% { background: linear-gradient(45deg, red, orange); }
+    25% { background: linear-gradient(45deg, yellow, green); }
+    50% { background: linear-gradient(45deg, blue, indigo); }
+    75% { background: linear-gradient(45deg, violet, pink); }
+    100% { background: linear-gradient(45deg, red, orange); }
+}
+  
+body {
+    background-size: 400% 400%;
+    animation: animateBackground 10s infinite alternate;
+}
+  
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 2px;
+    margin: 20px auto;
+    width: fit-content;
+}
+.square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+.white { background-color: #f0d9b5; }
+.black { background-color: #b58863; }
+.path { background-color: yellow !important; }
+.start { background-color: green !important; }
+.end { background-color: red !important; }
+.path:hover { background-color: orange !important; cursor: pointer; }
+
+button{
+    background-color: #efc279;
+    border-radius: 5px;
+}
+
+button:hover{
+    color: white;
+    cursor: pointer;
+}

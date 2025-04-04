@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List App</title>
+    <link rel="stylesheet" href="link.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Linked List App</h1>
+
+        
+        <div class="input-section">
+            <input type="number" id="nodeValue" placeholder="Enter value">
+            <button onclick="prependNode()">Prepend</button>
+            <button onclick="appendNode()">Append</button>
+        </div>
+
+        
+        <div class="operations">
+            <button onclick="popNode()">Pop</button>
+            <button onclick="displayList()">Show List</button>
+            <button onclick="findNode()">Find</button>
+        </div>
+
+    
+        <p id="listOutput">List: Empty</p>
+    </div>
+
+    <script src="link.js"></script>
+</body>
+</html>
