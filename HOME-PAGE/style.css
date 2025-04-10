@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Playfair  Display', serif;
+}
+
+p {
+	font-family: 'Roboto', serif;
+}
+
+/*################## About me ##################*/
+.about-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(
+		170deg,
+		#046b89 70%,
+		#ffffff calc(70% + 2px)
+	);
+}
+
+.about-me {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 30px;
+	max-width: 1200px;
+	overflow: hidden;
+}
+
+.hero {
+	width: 500px;
+	height: 500px;
+	-webkit-box-shadow: 3px 2px 27px 2px rgba(0, 0, 0, 0.58);
+	box-shadow: 3px 2px 27px 2px rgba(0, 0, 0, 0.58);
+}
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 20px;
+	background-color: #ffffff;
+	-webkit-box-shadow: 3px 2px 27px 2px rgba(0, 0, 0, 0.58);
+	box-shadow: 3px 2px 27px 2px rgba(0, 0, 0, 0.58);
+}
+
+.about-title {
+	font-weight: 400;
+	font-size: 40px;
+}
+
+.about-p {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.icons {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-end;
+}
+
+.icon {
+	width: 25px;
+}
+
+.icon:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+/*##############################################*/
+
+/*################## My work ##################*/
+.work-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 50px auto;
+	padding: 25px 30px;
+	font-family: 'Playfair  Display';
+}
+
+.work-container h1 {
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 40px;
+}
+
+.work-grid {
+	display: flex;
+	justify-content: center;
+	gap: 120px;
+	flex-wrap: wrap;
+}
+
+.project {
+	height: 350px;
+	width: calc(33, 33% - 100px);
+	max-width: 300px;
+	-webkit-box-shadow: 3px 2px 27px 2px rgba(0, 0, 0, 0.58);
+	box-shadow: 3px 2px 27px 2px rgba(0, 0, 0, 0.58);
+}
+
+.img-div {
+	height: 200px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.project-img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.project-name {
+	display: flex;
+	justify-content: space-between;
+}
+
+.project-description p {
+	font-weight: 200;
+}
+
+.project-icons {
+	display: flex;
+	gap: 10px;
+}
+
+.project-name,
+.project-description {
+	padding: 10px;
+}
+/*##############################################*/
+
+/*################## Contact me ##################*/
+.footer-container {
+	background-color: #046b89;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 25px 30px;
+	color: #ffffff;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.phone,
+.mail {
+	display: flex;
+	gap: 10px;
+}
+
+.socials {
+	display: flex;
+	gap: 30px;
+}
+
+.footer-icon {
+	height: 40px;
+}
+
+.footer-icon:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.footer-hero {
+	overflow: hidden;
+	height: 300px;
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+/*##############################################*/
+
+/* ############## Media Queries ############### */
+@media screen and (max-width: 900px) {
+	.about-me {
+		flex-direction: column;
+	}
+
+	.icons {
+		display: none;
+	}
+
+	.footer-hero {
+		width: 200px;
+	}
+
+	.footer-img {
+		width: 100%;
+		object-fit: cover;
+		object-position: right;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.about-container {
+		background-image: linear-gradient(
+			150deg,
+			#046b89 40%,
+			#ffffff calc(40% + 2px)
+		);
+	}
+	.about-me h1 {
+		text-align: center;
+	}
+
+	.about-text {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	.icons {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.contact {
+		padding: 30px;
+	}
+
+	.contact h1 {
+		text-align: center;
+	}
+
+	.footer-hero {
+		width: 100%;
+	}
+	.footer-img {
+		width: 75%;
+		object-fit: fill;
+	}
+}
+/* ############################################ */
